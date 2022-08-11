@@ -1,0 +1,24 @@
+<h3>mat list anf mat list-item</h3>
+<mat-list>
+  <mat-list-item>Suresh</mat-list-item>
+  <mat-list-item>Mahesh</mat-list-item>
+  <mat-list-item>Krishna</mat-list-item>
+</mat-list>
+<h3>mat nav list and mat list item</h3>
+<mat-nav-list>
+  <a mat-list-item href="/">
+    <mat-icon>book</mat-icon>
+  </a>
+  <a mat-list-item href="/">
+    <mat-icon>cloud</mat-icon>
+  </a>
+</mat-nav-list>
+<h3>mat-selection-list and mat-list-option</h3>
+<form [formGroup]="techForm" (ngSubmit)="onFormSubmit()">
+  <mat-selection-list formControlName="selectedTech">
+    <mat-list-option *ngFor="let tech of techList" [value]="tech">
+      {{ tech.lang }}
+    </mat-list-option>
+  </mat-selection-list>
+  <button mat-raised-button color="warn">Submit</button>
+</form>
